@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import '/game/dino_run.dart';
 import '/models/settings.dart';
 import '/widgets/main_menu.dart';
-import '/game/audio_manager.dart';
+//import '/game/audio_manager.dart';
 
 // This represents the settings menu overlay.
 class SettingsMenu extends StatelessWidget {
@@ -54,10 +54,10 @@ class SettingsMenu extends StatelessWidget {
                             Provider.of<Settings>(context, listen: false).bgm =
                                 value;
                             if (value) {
-                              AudioManager.instance
-                                  .startBgm('8BitPlatformerLoop.wav');
+                              //AudioManager.instance
+                                  //.startBgm('8BitPlatformerLoop.wav');
                             } else {
-                              AudioManager.instance.stopBgm();
+                              //AudioManager.instance.stopBgm();
                             }
                           },
                         );

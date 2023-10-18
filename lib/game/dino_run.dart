@@ -10,7 +10,7 @@ import 'package:flame/components.dart';
 import '/game/dino.dart';
 import '/widgets/hud.dart';
 import '/models/settings.dart';
-import '/game/audio_manager.dart';
+//import '/game/audio_manager.dart';
 import '/game/enemy_manager.dart';
 import '/models/player_data.dart';
 import '/widgets/pause_menu.dart';
@@ -60,11 +60,11 @@ class DinoRun extends FlameGame with TapDetector, HasCollisionDetection {
     settings = await _readSettings();
 
     /// Initilize [AudioManager].
-    await AudioManager.instance.init(_audioAssets, settings);
+    //await AudioManager.instance.init(_audioAssets, settings);
 
     // Start playing background music. Internally takes care
     // of checking user settings.
-    AudioManager.instance.startBgm('8BitPlatformerLoop.wav');
+   // AudioManager.instance.startBgm('8BitPlatformerLoop.wav');
 
     // Cache all the images.
     await images.loadAll(_imageAssets);
@@ -125,7 +125,7 @@ class DinoRun extends FlameGame with TapDetector, HasCollisionDetection {
       overlays.add(GameOverMenu.id);
       overlays.remove(Hud.id);
       pauseEngine();
-      AudioManager.instance.pauseBgm();
+      //AudioManager.instance.pauseBgm();
     }
     super.update(dt);
   }

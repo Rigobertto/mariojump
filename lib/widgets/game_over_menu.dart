@@ -7,7 +7,7 @@ import '/widgets/hud.dart';
 import '/game/dino_run.dart';
 import '/widgets/main_menu.dart';
 import '/models/player_data.dart';
-import '/game/audio_manager.dart';
+//import '/game/audio_manager.dart';
 
 // This represents the game over overlay,
 // displayed with dino runs out of lives.
@@ -68,7 +68,7 @@ class GameOverMenu extends StatelessWidget {
                         game.resumeEngine();
                         game.reset();
                         game.startGamePlay();
-                        AudioManager.instance.resumeBgm();
+                        //AudioManager.instance.resumeBgm();
                       },
                     ),
                     ElevatedButton(
@@ -83,7 +83,7 @@ class GameOverMenu extends StatelessWidget {
                         game.overlays.add(MainMenu.id);
                         game.resumeEngine();
                         game.reset();
-                        AudioManager.instance.resumeBgm();
+                        //AudioManager.instance.resumeBgm();
                       },
                     ),
                   ],
